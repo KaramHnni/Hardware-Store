@@ -8,7 +8,6 @@
         <title>@yield('page-title')</title>
 
         <!-- Fonts -->
-        <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
         <link href="{{ asset('/assets/css/font-raleway.css') }}" rel="stylesheet" type="text/css">
        
 

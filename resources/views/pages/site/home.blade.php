@@ -12,8 +12,22 @@
             <a href="#" class="hover:border-black hover:text-black inline-block mx-2 px-2 py-2 font-bold text-orange-light border-2 text-lg border-solid border-orange-light rounded">Discover More</a>
         </div>
     </div>
-<div class="min-h-screen">
-    
+<div class="min-h-screen flex items-center justify-around ">
+
+    <div class="w-1/5">
+        <p class="text-center text-orange-darker font-semibold leading-loose">Discover the hardware occasions right near you</p>
+    </div>
+    <div class="w-1/5">
+        <p class="text-center text-orange-darker font-semibold leading-loose">Higher Levels Of Security</p>
+    </div>
+    <div class="w-1/5">
+        <p class="text-center text-orange-darker font-semibold leading-loose">Contact The Buyers Directly</p>
+    </div>
+    <div class="w-1/5">
+        <p class="text-center text-orange-darker font-semibold leading-loose">Learn more everyday about the market</p>
+    </div>
+
+
 </div>
 
 @endsection
