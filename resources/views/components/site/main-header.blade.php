@@ -1,4 +1,4 @@
-<header class="bg-white px-8 py-4 flex justify-between items-center">
+<header class="bg-white px-8 py-4 flex justify-between items-center border-b border-solid border-grey-lighter">
 @include('components.logo')
 <nav class="sticky">
     <ul class="list-reset flex  items-center">
