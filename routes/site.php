@@ -11,6 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-    
-});
+Route::get('/','HomeController@show')->name('site.home');
