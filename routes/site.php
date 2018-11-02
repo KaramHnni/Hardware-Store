@@ -14,3 +14,4 @@
 Route::get('/','HomeController@show')->name('site.home');
 Route::get('/register','Auth\RegisterController@show')->name('site.register');
 Route::post('/register','Auth\RegisterController@register');
+Route::post('/login','Auth\LoginController@show')->name('login');
