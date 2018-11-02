@@ -52,7 +52,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapSiteRoutes()
     {
         Route::middleware('site')
-             ->namespace($this->namespace)
+             ->namespace($this->namespace .'\Site')
              ->group(base_path('routes/site.php'));
     }
 
