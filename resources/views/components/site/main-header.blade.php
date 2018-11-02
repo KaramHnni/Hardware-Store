@@ -1,16 +1,17 @@
 <header class="bg-white px-8 py-4 flex justify-between items-center">
 @include('components.logo')
-<nav>
+<nav class="sticky">
     <ul class="list-reset flex  items-center">
-        <li><a href="#" class="main-header__item inline-block px-4 py-2 font-semibold text-orange-light ">BLOG</a></li>
-        <li><a href="#" class="main-header__item inline-block px-4 py-2 font-semibold text-orange-light">SHOP</a></li>
+        <li><a href="#" class="main-header__item inline-block mx-2 px-2 py-2 font-semibold text-orange-light ">Blog</a></li>
+        <li><a href="#" class="main-header__item inline-block mx_2 px-2 py-2 font-semibold text-orange-light">Shop</a></li>
+        <li><a href="#" class="main-header__item inline-block mx-2 px-2 py-2 font-semibold text-orange-light">Marketplace</a></li>
+
         @guest
-        <li><a href="#" class="main-header__item inline-block px-4 py-2 font-semibold text-orange-light">LOGIN</a></li>
-        <li><a href="#" class="main-header__item inline-block px-4 py-2 font-semibold text-orange-light">REGISTER</a></li>
+        <li><a href="#" class="hover:border-black hover:text-black inline-block mx-2 px-2 py-2 font-semibold text-orange-light border border-solid border-orange-light rounded">Register for free</a></li>
         @endguest
         @auth
-        <li><a href="#" class="main-header__item inline-block px-4 py-2 font-semibold text-orange-light">PROFILE</a></li>
-        <li><a href="#" class="main-header__item inline-block px-4 py-2 font-semibold text-orange-light">SIGN OUT</a></li>
+        <li><a href="#" class="main-header__item inline-block mx-2 px-2 py-2 font-semibold text-orange-light">PROFILE</a></li>
+        <li><a href="#" class="main-header__item inline-block mx-2 px-2 py-2 font-semibold text-orange-light">SIGN OUT</a></li>
         @endauth
     </ul>
 </nav>
