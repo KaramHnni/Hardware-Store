@@ -18,3 +18,22 @@ input,textarea,button,select{
     font-family:'Raleway';
     outline:none;
 }
+.main-header__item{
+    position:relative;
+}
+.main-header__item::before{
+    content :'';
+    width:0%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    height:2px;
+    background:orangered;
+    transition : width .5s ease;
+}
+.main-header__item:hover{
+    color:black;
+}
+.main-header__item:hover::before{
+    width:100%;
+}

@@ -15,8 +15,9 @@
         <link href="{{ asset('/assets/css/tailwind.min.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset('/assets/css/site.css') }}" rel="stylesheet" type="text/css">
     </head>
-    <body>
-        <div class="bg-green-lightest">
+    <body  class="bg-green-lightest">
+        <div>
+            @include('components.site.main-header')
             @yield('main-content')
         </div>
     </body>
