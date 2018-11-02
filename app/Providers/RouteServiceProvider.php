@@ -36,8 +36,8 @@ class RouteServiceProvider extends ServiceProvider
     public function map()
     {
         $this->mapApiRoutes();
-
         $this->mapSiteRoutes();
+        $this->mapUserRoutes();
 
         //
     }
@@ -54,6 +54,19 @@ class RouteServiceProvider extends ServiceProvider
         Route::middleware('site')
              ->namespace($this->namespace .'\Site')
              ->group(base_path('routes/site.php'));
+    }
+    /**
+     * Define the "User" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * @return void
+     */
+    protected function mapUserRoutes()
+    {
+        Route::middleware('user')
+             ->namespace($this->namespace .'\Dashboard')
+             ->group(base_path('routes/user.php'));
     }
 
     /**
