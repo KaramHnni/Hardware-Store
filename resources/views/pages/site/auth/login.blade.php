@@ -4,8 +4,8 @@
 @endsection
 @section('main-content')
 <div class="bg-green-lightest w-full pb-12">
-@include('components.site.main-header')
-<form method="POST" action="" class=" py-4 px-8 w-1/2 bg-white rounded shadow mx-auto mt-32">
+@include('components.main-header')
+<form method="POST" action="{{route('login')}}" class=" py-4 px-8 w-1/2 bg-white rounded shadow mx-auto mt-32">
     @csrf
     <div class="my-8">
         <label for="email" class="block font-semi-bold text-orange-dark mb-4">E-Mail</label>

@@ -4,7 +4,7 @@
 @endsection
 @section('main-content')
 <div class="bg-green-lightest w-full pb-12">
-@include('components.site.main-header')
+@include('components.main-header')
 <form method="POST" action="{{route('site.register')}}" class=" py-4 px-8 w-1/2 bg-white rounded shadow mx-auto mt-32">
     @csrf
     <div class="my-8">

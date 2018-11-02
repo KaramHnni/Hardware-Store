@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Site\Auth;
 
+use Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -11,13 +12,13 @@ class LoginController extends Controller
         return view('pages.site.auth.login');
     }
 
-    public function aut(Request $request){
+    public function auth(Request $request){
         $credentials = $request->only('email','password');
         if(Auth::attempt($credentials)){
-            return redirect()->intended('User/Dashboard');
+            return redirect()->intended('user/dashboard');
         }
         else{
-            redirect(route('login'))->with('credentials',true);
+           return redirect()->back()->with(['credentials' => true]);
         }
     }
 }

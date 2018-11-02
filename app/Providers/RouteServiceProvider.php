@@ -62,13 +62,14 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
+    
     protected function mapUserRoutes()
     {
         Route::middleware('user')
-             ->namespace($this->namespace .'\Dashboard')
+             ->prefix('user')
+             ->namespace($this->namespace . '\User')
              ->group(base_path('routes/user.php'));
     }
-
     /**
      * Define the "api" routes for the application.
      *

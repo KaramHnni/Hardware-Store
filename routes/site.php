@@ -16,3 +16,4 @@ Route::get('/register','Auth\RegisterController@show')->name('site.register');
 Route::post('/register','Auth\RegisterController@register');
 Route::get('/login','Auth\LoginController@show')->name('login');
 Route::post('/login','Auth\LoginController@auth');
+Route::get('/signOut','Auth\SignOutController@auth')->name('site.signout');

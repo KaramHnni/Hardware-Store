@@ -4,7 +4,7 @@
 @endsection
 @section('main-content')
 <div class="bg-green-lightest w-full min-h-screen">
-@include('components.site.main-header')
+@include('components.main-header')
     
         <div class=" w-1/2 text-center  mx-auto my-32">
             <p class="text-orange-darker text-3xl my-12">the E-Market you have been looking for</p>
