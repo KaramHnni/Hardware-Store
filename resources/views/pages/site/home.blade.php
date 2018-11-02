@@ -34,7 +34,7 @@
         <p class="text-center text-4xl my-20 font-bold">Join Us Now</p>
         <div class="flex justify-between py-20 w-1/2 mx-auto items-center">
 
-                <a href="#" class="hover:border-black hover:text-black inline-block mx-2 px-2 py-2 font-bold text-orange-light border-2 text-lg border-solid border-orange-light rounded">Register For Free</a>
+                <a href="{{route('site.register')}}" class="hover:border-black hover:text-black inline-block mx-2 px-2 py-2 font-bold text-orange-light border-2 text-lg border-solid border-orange-light rounded">Register For Free</a>
             <span>You Have an account ? Then</span>
             <a href="#" class="hover:border-black hover:bg-black inline-block mx-2 px-2 py-2 font-bold text-white border-2 text-lg border-orange-light border-solid bg-orange-light rounded">Login To your Account</a>
 
