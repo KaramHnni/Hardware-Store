@@ -1,0 +1,1 @@
+<a class="block italic font-bold text-5xl text-yellow">HS<span class="block text-lg italic font-semibold text-white">Blog</span></a>
