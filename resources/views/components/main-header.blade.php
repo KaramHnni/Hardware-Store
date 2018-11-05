@@ -2,7 +2,7 @@
 @include('components.logo')
 <nav class="sticky">
     <ul class="list-reset flex  items-center">
-        <li><a href="#" class="main-header__item inline-block mx-2 px-2 py-2 font-semibold text-orange-light ">Blog</a></li>
+        <li><a href="{{route('blog.show')}}" class="main-header__item inline-block mx-2 px-2 py-2 font-semibold text-orange-light ">Blog</a></li>
         <li><a href="#" class="main-header__item inline-block mx_2 px-2 py-2 font-semibold text-orange-light">Shop</a></li>
         <li><a href="#" class="main-header__item inline-block mx-2 px-2 py-2 font-semibold text-orange-light">Marketplace</a></li>
 
