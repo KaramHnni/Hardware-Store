@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: 'Raleway';
+    font-weight:400;
+    position:relative;
+
+
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+input,textarea,button,select{
+    font-family:'Raleway';
+    outline:none;
+}
+.main-header__item{
+    position:relative;
+}
+.main-header__item::before{
+    content :'';
+    width:0%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    height:2px;
+    background:yellow;
+    transition : width .5s ease;
+}
+.main-header__item:hover::before{
+    width:100%;
+}
