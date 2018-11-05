@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Blog Routes
@@ -10,4 +9,5 @@
 | contains the "blog" middleware group. Now create something great!
 |
 */
+
 Route::get('/','IndexController@show')->name('blog.show');

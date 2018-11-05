@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 class IndexController extends Controller
 {
     public function show(){
-        return view('pages.blog.home');
+        
+        return view('pages.blog.index');
     }
 }
