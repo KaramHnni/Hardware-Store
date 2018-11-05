@@ -1,6 +1,6 @@
 <header class="bg-white px-8 py-4 flex justify-between items-center border-b border-solid border-grey-lighter">
-@include('components.logo')
-<nav class="sticky">
+@include('components.site.logo')
+<nav>
     <ul class="list-reset flex  items-center">
         <li><a href="{{route('blog.show')}}" class="main-header__item inline-block mx-2 px-2 py-2 font-semibold text-orange-light ">Blog</a></li>
         <li><a href="#" class="main-header__item inline-block mx_2 px-2 py-2 font-semibold text-orange-light">Shop</a></li>
