@@ -4,6 +4,6 @@
 @endsection
 @section('main-content')
 <div class="bg-green-lightest w-full min-h-screen">
-@include('components.main-header')
+@include('components.site.main-header')
 </div>
 @endsection
