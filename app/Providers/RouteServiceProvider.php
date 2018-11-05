@@ -38,6 +38,7 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapApiRoutes();
         $this->mapSiteRoutes();
         $this->mapUserRoutes();
+        $this->mapBlogRoutes();
 
         //
     }
@@ -69,6 +70,21 @@ class RouteServiceProvider extends ServiceProvider
              ->prefix('user')
              ->namespace($this->namespace . '\User')
              ->group(base_path('routes/user.php'));
+    }
+    /**
+     * Define the "Blog" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * @return void
+     */
+    
+    protected function mapBlogRoutes()
+    {
+        Route::middleware('blog')
+             ->prefix('blog')
+             ->namespace($this->namespace . '\Blog')
+             ->group(base_path('routes/blog.php'));
     }
     /**
      * Define the "api" routes for the application.
