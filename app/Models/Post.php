@@ -41,9 +41,13 @@ class Post extends Model
         $this->save();
     }
 
-
     public function category(){
 
         return $this->hasOne('\App\Models\Category', 'id', 'category_id');
+    }
+
+    public function user(){
+
+        return $this->hasOne('\App\Models\User','id','user_id');
     }
 }

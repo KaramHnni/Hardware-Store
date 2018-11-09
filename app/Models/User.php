@@ -54,4 +54,9 @@ class User extends Authenticatable
         $user->created_at = now();
         $user->save();
     }
+
+    public function posts(){
+
+        return $this->hasMany('\App\Models\Post','user_id','id');
+    }
 }
