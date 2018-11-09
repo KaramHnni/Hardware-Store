@@ -56,11 +56,10 @@ class Post extends Model
         $post->user_id = auth()->user()->id;
         $post->category_id = $request->category;
             if($request->hasFile('cover_image')){
-                $fileNameWithExtension = $request->file('cover_image')->getClientOriginalName();
-                $filename = pathinfo($fileNameWithExtension,PATHINFO_FILENAME);
-                $extension = $request->file('cover_image')->getClientOriginalExtension();
-                $filenameToStore = $filename . '__' . time() . '__' . $extension ;
-                $path = $request->file('cover_image')->storeAs('public/Cover_Images',$filenameToStore);
+                $image = $request->file('cover_image');
+                $filenameToStore = $image->getClientOriginalName(). '__' . time() . '.' .$image->getClientOriginalExtension() ;
+                $path = public_path('/images/Blog/Posts/Cover_Images');
+                $image->move($path, $filenameToStore);
             }else{
                $filenameToStore = 'noimage.jpg'; 
             }
