@@ -15,7 +15,7 @@
             
             <article class=" w-2/5 border border-solid border-black">
             <img class="block" src="{{asset("/images/Blog/Posts/Cover_Images/$post->image")}}">
-            <h3>Written By : {{$post->user->name}}</h3>
+            <h3>Written By : {{$post->user->FullName}}</h3>
             </article>
             @endforeach
 

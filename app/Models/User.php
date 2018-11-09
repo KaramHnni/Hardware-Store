@@ -23,6 +23,11 @@ class User extends Authenticatable
      */
     public $timestamps = false;
 
+    public function getFullNameAttribute(){
+
+        return  $this->last_name.' '.$this->name ;
+
+    }
     public function getStatusNameAttribute(){
         if($this->status == false){
             return " Inactive ";
