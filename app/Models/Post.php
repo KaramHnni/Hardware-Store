@@ -19,4 +19,25 @@ class Post extends Model
      * @var bool
      */
     public $timestamps = false;
+
+    public function getStatusNameAttribute(){
+        if($this->status == false){
+            return " Inactive ";
+        }
+        if($this->status == true){
+            return " Active " ; 
+        }
+    }
+ 
+    public function setActive(){
+        $this->status = 1;
+        $this->updated_at = now();
+        $this->save();
+    }
+ 
+    public function setInactive(){
+        $this->status = 0;
+        $this->updated_at = now();
+        $this->save();
+    }
 }
