@@ -8,14 +8,17 @@
 @include('components.blog.secondary-header')
     <div class="w-4/5 mx-auto my-12">
         <section class="my-4">
-        <h1 class="text-center font-bold text-2xl mb-8 ">Our Latest Posts</h1>
-        <div class="px-4 flex justify-around items-center wrap">
+        <h1 class="text-center font-bold text-2xl mb-12 ">Our Latest Posts</h1>
+        <div class="px-4 flex justify-around items-center flex-wrap">
             @if($posts->count() > 0 )
             @foreach($posts as $post)
-            
-            <article class=" w-2/5 border border-solid border-black">
-            <img class="block" src="{{asset("/images/Blog/Posts/Cover_Images/$post->image")}}">
-            <h3>Written By : {{$post->user->FullName}}</h3>
+            <article style="width:400px;" class=" shadow border border-solid border-grey-light my-12 pb-8">
+                <img class="block h-64 bg-grey-light" src="{{asset("/images/Blog/Posts/Cover_Images/$post->image")}}">
+                <div class="h-64">
+                <p class=" my-12 mx-4 text-2xl font-bold " >{{$post->title}}</p>
+            <p class=" my-12 mx-4 text-xl" >{{substr($post->body,0,40)}} ...</p>
+            <button class="block text-xl my-12 mx-4 ">Continue Reading > </button>
+                </div>
             </article>
             @endforeach
 
