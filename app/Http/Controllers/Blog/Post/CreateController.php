@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Blog\Posts;
+namespace App\Http\Controllers\Blog\Post;
 
 use App\Models\Category;
 use App\Models\Post;

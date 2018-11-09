@@ -13,7 +13,7 @@
             @if($posts->count() > 0 )
             @foreach($posts as $post)
             <article style="width:400px;" class=" shadow border border-solid border-grey-light my-12 pb-8">
-                <img class="block h-64 bg-grey-light" src="{{asset("/images/Blog/Posts/Cover_Images/$post->image")}}">
+                <img class="block  bg-grey-light" src="{{asset("/images/Blog/Posts/Cover_Images/$post->image")}}">
                 <div class="h-64">
                 <p class=" my-12 mx-4 text-2xl font-bold " >{{$post->title}}</p>
             <p class=" my-12 mx-4 text-xl" >{{substr($post->body,0,40)}} ...</p>
