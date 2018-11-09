@@ -10,7 +10,7 @@ class CreateController extends Controller
 {
     public function show(){
         return view('pages.blog.posts.create',[
-            'categories' => Category::active()->get,
+            'categories' => Category::active()->get(),
         ]);
     }
 }
