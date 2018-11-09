@@ -9,7 +9,9 @@
             <li><a href="#" class="main-header__item inline-block mx-2 px-2 py-2  text-white">Marketplace</a></li>
     
             @guest
-            <li><a href="{{route('site.register')}}" class="hover:border-yellow hover:bg-yellow inline-block mx-2 px-2 py-2 text-white border border-solid border-white rounded">Register for free</a></li>
+            <li><a href="{{route('login')}}" class=" inline-block mx-2 px-2 py-2 text-white">Login</a></li>
+            <li><a href="{{route('site.register')}}" class=" inline-block mx-2 px-2 py-2 text-white ">Register for free</a></li>
+
             @endguest
             @auth
             <li><a href="#" class="main-header__item inline-block mx-2 px-2 py-2  text-white">{{auth()->user()->username}}</a></li>
