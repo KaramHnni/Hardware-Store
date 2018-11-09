@@ -40,4 +40,10 @@ class Post extends Model
         $this->updated_at = now();
         $this->save();
     }
+
+
+    public function category(){
+
+        return $this->hasOne('\App\Models\Category', 'id', 'category_id');
+    }
 }

@@ -40,4 +40,9 @@ class Category extends Model
        $this->updated_at = now();
        $this->save();
    }
+
+   public function posts(){
+
+    return $this->hasMany('\App\Models\Post','category_id','id');
+   }
 }
