@@ -29,6 +29,11 @@ class Category extends Model
        }
    }
 
+   public function active(){
+       
+       return self::where('status',1);
+   }
+
    public function setActive(){
        $this->status = 1;
        $this->updated_at = now();

@@ -28,6 +28,11 @@ class Post extends Model
             return " Active " ; 
         }
     }
+
+    public function active(){
+       
+        return self::where('status',1);
+    }
  
     public function setActive(){
         $this->status = 1;

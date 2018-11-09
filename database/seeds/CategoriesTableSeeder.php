@@ -17,5 +17,17 @@ class CategoriesTableSeeder extends Seeder
             'created_at' => now(),
             'status' => '1'
         ]);
+        DB::table('categories')->insert([
+            'slug' => 'desktop-computers',
+            'name' => 'Desktop Computers',
+            'created_at' => now(),
+            'status' => '1'
+        ]);
+        DB::table('categories')->insert([
+            'slug' => 'smartphones',
+            'name' => 'Smartphones',
+            'created_at' => now(),
+            'status' => '1'
+        ]);
     }
 }
