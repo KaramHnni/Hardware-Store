@@ -46,6 +46,10 @@ class Post extends Model
         $this->save();
     }
 
+    public static function fetchBySlug($slug){
+        return $self:where('slug',$slug);
+    }
+
 
     public function store($request){
 
