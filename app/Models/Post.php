@@ -29,7 +29,7 @@ class Post extends Model
         }
     }
 
-    public function active(){
+    public static function active(){
        
         return self::where('status',1);
     }

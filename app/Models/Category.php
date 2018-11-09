@@ -11,7 +11,7 @@ class Category extends Model
      *
      * @var string
      */
-    protected $table = 'posts';
+    protected $table = 'categories';
     
     /**
      * Indicates if the model should be timestamped.
@@ -29,8 +29,8 @@ class Category extends Model
        }
    }
 
-   public function active(){
-       
+   public static function active(){
+
        return self::where('status',1);
    }
 

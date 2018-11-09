@@ -2,11 +2,10 @@
 
     <ul class="list-reset flex  items-center">
             <li><a href="{{route('blog.show')}}" class="main-header__item inline-block mx-2 px-2 py-2 text-black ">Main</a></li>
-            <li><a href="#" class="main-header__item inline-block mx-2 px-2 py-2 text-black ">Laptops</a></li>
-            <li><a href="#" class="main-header__item inline-block mx-2 px-2 py-2 text-black ">Desktop Computers</a></li>
-            <li><a href="#" class="main-header__item inline-block mx-2 px-2 py-2 text-black ">Smartphones</a></li>
-            <li><a href="#" class="main-header__item inline-block mx-2 px-2 py-2 text-black ">Confrences</a></li>
-            <li><a href="#" class="main-header__item inline-block mx-2 px-2 py-2 text-black ">Companies</a></li>
+           @foreach($categories as $category)
+
+           <li><a href="#" class="main-header__item inline-block mx-2 px-2 py-2 text-black ">{{$category->name}}</a></li>
+           @endforeach
 
 
     </ul>

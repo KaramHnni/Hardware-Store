@@ -32,11 +32,11 @@ class User extends Authenticatable
         }
     }
  
-    public function active(){
+    public static function active(){
        
-        return self::where('status',1);
+        return self::where('status', 1);
     }
-    
+
     public function setActive(){
         $this->status = 1;
         $this->updated_at = now();
