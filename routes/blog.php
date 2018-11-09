@@ -11,3 +11,4 @@
 */
 
 Route::get('/','IndexController@show')->name('blog.show');
+Route::get('/create-new-post')->name('blog.post.create');

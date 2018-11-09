@@ -9,8 +9,8 @@
             <li><a href="#" class="main-header__item inline-block mx-2 px-2 py-2  text-white">Marketplace</a></li>
     
             @guest
-            <li><a href="{{route('login')}}" class=" inline-block mx-2 px-2 py-2 text-white">Login</a></li>
-            <li><a href="{{route('site.register')}}" class=" inline-block mx-2 px-2 py-2 text-white ">Register for free</a></li>
+            <li><a href="{{route('login')}}" class="main-header__item inline-block mx-2 px-2 py-2 text-white">Login</a></li>
+            <li><a href="{{route('site.register')}}" class="main-header__item inline-block mx-2 px-2 py-2 text-white ">Register for free</a></li>
 
             @endguest
             @auth
