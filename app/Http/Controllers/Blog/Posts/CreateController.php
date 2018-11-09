@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Blog\Posts;
 
 use App\Models\Category;
+use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -13,8 +14,20 @@ class CreateController extends Controller
             'categories' => Category::active()->get(),
         ]);
 
-        public function create(){
+           }
+           
+           public function create(Request $request){
+
+            $this->validate($request,[
+                'cover_image' => 'image|nullable',
+            ]);
+
+
+            $post = new Post;
+           $post =  $post->store($request);
+            return redirect(route('blog.show'));
+
             
         }
     }
-}
+
