@@ -17,7 +17,7 @@
                 <div class="h-64">
                 <p class=" my-12 mx-4 text-2xl font-bold " >{{$post->title}}</p>
             <p class=" my-12 mx-4 text-xl" >{{substr($post->body,0,40)}} ...</p>
-            <button class="block text-xl my-12 mx-4 ">Continue Reading > </button>
+                <a href="{{$post->slug}}"class="block text-xl my-12 mx-4 ">Continue Reading > </button>
                 </div>
             </article>
             @endforeach
@@ -27,7 +27,6 @@
             <h1 class="text-center font-bold text-2xl my-8 text-grey-dark ">There Are no posts to show</h1>
 
             @endif
-
 
 
         </div>
