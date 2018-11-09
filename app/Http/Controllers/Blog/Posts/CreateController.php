@@ -12,5 +12,9 @@ class CreateController extends Controller
         return view('pages.blog.posts.create',[
             'categories' => Category::active()->get(),
         ]);
+
+        public function create(){
+            
+        }
     }
 }

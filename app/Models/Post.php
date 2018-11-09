@@ -46,6 +46,31 @@ class Post extends Model
         $this->save();
     }
 
+
+    public function store($request){
+
+        $post = new self;
+
+        $post->title = $request->title;
+        $post->body = $request->body;
+        $post->user_id = auth()->user()->id;
+        $post->category_id = $request->category->id;
+            if($request->hasFile('cover_image')){
+                $fileNameWithExtension = $request->file('cover_image')->getClientOriginalName();
+                $filename = pathinfo($fileNameWithExtension,PATHINFO_FILENAME);
+                $extension = $request->file('cover_image')->getClientOriginalExtension();
+                $filenameToStore = $filename . '__' . time() . '__' . $extension;
+                $path = $request->file('cover_image')->storeAs('public/Posts/Cover_Images',$filenameToStore);
+
+
+            }
+            else{
+               $fileNameToStore('noimage.jpg'); 
+            }
+        $post->image = $fileNameToStore;
+        $post->save();
+    }
+
     public function category(){
 
         return $this->hasOne('\App\Models\Category', 'id', 'category_id');
