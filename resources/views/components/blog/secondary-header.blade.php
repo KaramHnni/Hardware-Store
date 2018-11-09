@@ -5,6 +5,7 @@
            @foreach($categories as $category)
 
            <li><a href="#" class="main-header__item inline-block mx-2 px-2 py-2 text-black ">{{$category->name}}</a></li>
+           
            @endforeach
 
 
