@@ -50,6 +50,10 @@ class Post extends Model
         return self::where('slug',$slug)->first();
     }
 
+    public static function myPosts(){
+
+        return self::where('user_id',auth()->user()->id);
+    }
 
     public function store($request){
 
