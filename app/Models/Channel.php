@@ -51,6 +51,27 @@ class Channel extends Model
         return self::where('slug',$slug)->first();
     }
 
+    public function store($request){
+
+        $channel = new self;
+
+        $channel->name = $request->name;
+        $channel->user_id = auth()->user()->id;
+        $channel->slug =str_slug($request->name , '-');
+        if($request->hasFile('channel_image')){
+                $image = $request->file('channel_image');
+                $filenameToStore = $image->getClientOriginalName(). '__' . time() . '.' .$image->getClientOriginalExtension() ;
+                $path = public_path('/images/Blog/Channels/Channel_Images');
+                $image->move($path, $filenameToStore);
+            }else{
+               $filenameToStore = 'noimage.jpg'; 
+            }
+        $channel->image = $filenameToStore;
+        $channel->status = 1;
+        $channel->save();
+    }
+
+
     public function posts(){
 
             return $this->hasMany('\App\Models\Post','channel_id','id');
