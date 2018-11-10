@@ -59,7 +59,7 @@ class Post extends Model
         $post->body = $request->body;
         $post->user_id = auth()->user()->id;
         $post->category_id = $request->category;
-        $post->slug =$str_slug($body->title , '-');
+        $post->slug =str_slug($request->title , '-');
             if($request->hasFile('cover_image')){
                 $image = $request->file('cover_image');
                 $filenameToStore = $image->getClientOriginalName(). '__' . time() . '.' .$image->getClientOriginalExtension() ;

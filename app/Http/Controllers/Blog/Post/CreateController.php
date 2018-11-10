@@ -24,7 +24,7 @@ class CreateController extends Controller
 
             $post = new Post;
            $post =  $post->store($request);
-           // return redirect(route('blog.show'));
+            return redirect(route('blog.show'));
 
             
         }
