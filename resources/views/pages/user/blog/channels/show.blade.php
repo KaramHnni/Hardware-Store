@@ -14,7 +14,7 @@ My Channels
             <article style="width:200px;height:70px;" class="flex  shadow border border-solid border-grey-light my-12 pb-8">
                 <img style="height:70px;" class="w-16 bg-grey-light" src="{{asset("/images/Blog/Channels/Channel_Images/$channel->image")}}">            
                 <div class="flex-grow">
-                <p class="px-4 font-bold pt-4">{{$channel->name}}</p>
+                <a href="/blog/Channels/{{$channel->slug}}" class="block px-4 font-bold pt-4">{{$channel->name}}</a>
                 <p class=" px-2 pt-2 text-sm text-grey-dark">followers: xxx</p>
             </div>
             </article>
