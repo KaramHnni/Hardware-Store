@@ -13,10 +13,9 @@ class CreateController extends Controller
         return view('pages.blog.posts.create',[
             'categories' => Category::active()->get(),
         ]);
-
            }
-           
-           public function create(Request $request){
+
+    public function create(Request $request){
 
             $this->validate($request,[
                 'cover_image' => 'image|nullable',
@@ -25,7 +24,7 @@ class CreateController extends Controller
 
             $post = new Post;
            $post =  $post->store($request);
-            return redirect(route('blog.show'));
+           // return redirect(route('blog.show'));
 
             
         }

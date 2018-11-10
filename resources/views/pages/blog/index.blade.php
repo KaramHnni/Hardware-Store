@@ -17,7 +17,7 @@
                 <div class="h-64">
                 <p class=" my-12 mx-4 text-2xl font-bold " >{{$post->title}}</p>
             <p class=" my-12 mx-4 text-xl" >{{substr($post->body,0,40)}} ...</p>
-                <a href="/blog/{{$post->slug}}"class="block text-xl my-12 mx-4 ">Continue Reading > </a>
+                <a href="/blog/Posts/{{$post->slug}}"class="block text-xl my-12 mx-4 ">Continue Reading > </a>
                 </div>
             </article>
             @endforeach
