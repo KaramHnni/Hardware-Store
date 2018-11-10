@@ -50,4 +50,9 @@ class Channel extends Model
     public static function fetchBySlug($slug){
         return self::where('slug',$slug)->first();
     }
+
+    public function posts(){
+
+            return $this->hasMany('\App\Models\Post','channel_id','id');
+    }
 }

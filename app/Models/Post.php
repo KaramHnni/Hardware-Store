@@ -82,4 +82,9 @@ class Post extends Model
 
         return $this->hasOne('\App\Models\User','id','user_id');
     }
+
+    public function channel(){
+
+        return $this->hasOne('\App\Models\Channel','id','user_id');
+    }
 }
