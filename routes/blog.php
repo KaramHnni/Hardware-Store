@@ -12,6 +12,7 @@
 
 Route::get('/','IndexController@show')->name('blog.show');
 Route::get('/Posts/{slug}','Post\IndexController@show')->name('blog.post.show');
+Route::get('/Channels/{slug}','Channel\IndexController@show')->name('blog.channel.show');
 Route::group(['middleware' => 'auth'],function(){
     Route::get('/create-new-post','Post\CreateController@show')->name('blog.post.create');
     Route::post('/create-new-post','Post\CreateController@create');
