@@ -14,3 +14,5 @@ Route::get('/','indexController@redirectToDashboard');
 Route::get('/dashboard','DashboardController@show')->name('user.dashboard');
 
 Route::get('/my-posts','Blog\Posts\IndexController@show')->name('user.blog.posts');
+
+Route::get('/my-channels','Blog\Channels\IndexController@show')->name('user.blog.channels');
