@@ -47,6 +47,8 @@ class Channel extends Model
         $this->save();
     }
 
+    
+
     public static function fetchBySlug($slug){
         return self::where('slug',$slug)->first();
     }
