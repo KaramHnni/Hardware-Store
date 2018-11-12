@@ -8,6 +8,9 @@
            
            @endforeach
 
+           <li><a href="#" class="main-header__item inline-block mx-2 px-2 py-2 text-black ">Channels</a></li>
+
+
 
     </ul>
 </nav>
