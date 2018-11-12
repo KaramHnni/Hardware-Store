@@ -8,7 +8,7 @@
            
            @endforeach
 
-           <li><a href="#" class="main-header__item inline-block mx-2 px-2 py-2 text-black ">Channels</a></li>
+    <li><a href="{{route('blog.channels')}}" class="main-header__item inline-block mx-2 px-2 py-2 text-black ">Channels</a></li>
 
 
 
