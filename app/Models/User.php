@@ -61,6 +61,7 @@ class User extends Authenticatable
         $user->password = Hash::make($request->password);
         $user->name = $request->name;
         $user->last_name = $request->last_name;
+        $user->status = 1;
         $user->created_at = now();
         $user->save();
     }

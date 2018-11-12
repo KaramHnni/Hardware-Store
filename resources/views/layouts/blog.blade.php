@@ -16,7 +16,7 @@
         <link href="{{ asset('/assets/css/blog.css') }}" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <div>
+        <div class="">
             @yield('main-content')
         </div>
     </body>

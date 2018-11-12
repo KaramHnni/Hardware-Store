@@ -41,7 +41,7 @@ nav{
     background:white;
 }
 .profile--dropdown--menu{
-    top:50px;
+    top:66px;
     display:none;
 }
 .profile--dropdown--trigger:hover > .profile--dropdown--menu{
