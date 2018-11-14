@@ -13,7 +13,7 @@ class DeleteController extends Controller
         $channel = Channel::fetchBySlug($slug);
         $channel = $channel->delete();
 
-        return redirect()->back();
+        return redirect(route('blog.channels'));
 
     }
 }

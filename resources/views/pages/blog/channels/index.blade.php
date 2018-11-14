@@ -26,7 +26,7 @@ Create A new Channel
 
             @else
 
-            <h1 class="text-center font-bold text-2xl my-8 text-grey-dark ">There Are no posts to show</h1>
+            <h1 class="text-center font-bold text-2xl my-8 text-grey-dark ">There Are no Channels to show</h1>
 
             @endif
 
