@@ -12,8 +12,22 @@
 @include('components.blog.secondary-header')
 
 <div class="w-4/5 mx-auto my-12">
+    <div class="flex justify-between  items-center ">
+    <div >
         <h1 class="text-5xl font-bold mb-4">{{$channel->name}}</h1>
         <p class="text-grey-dark" >Owned By : {{$channel->user->FullName}}</p>
+    </div>
+    <div>
+        <div class="relative">
+        <a class="inlune-block px-2 bg-black text-white ">...</a>
+            <ul class="absolute list-reset px-4 shadow">
+                <li class=" py-4"><a href="{{route('blog.channel.edit',['slug' => $channel->slug])}}">Edit Your Channel</a></li>
+                <li class="py-4"><a href="">Delete Your Channel</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <div>
         @if($channel->posts->count() > 0 )
             @foreach($channel->posts as $post)
             <article style="width:400px;" class=" shadow border border-solid border-grey-light my-12 pb-8">
