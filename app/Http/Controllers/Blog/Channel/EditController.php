@@ -17,4 +17,13 @@ class EditController extends Controller
         ]);
 
     }
+
+
+    public function update(Request $request, $slug){
+
+        $channel = Channel::fetchBySlug($slug);
+        $channel = $channel->updateDetails($request);
+
+        return redirect(route('blog.channel.show',['slug' => $slug]));
+    }
 }
