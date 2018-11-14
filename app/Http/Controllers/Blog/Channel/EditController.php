@@ -24,6 +24,6 @@ class EditController extends Controller
         $channel = Channel::fetchBySlug($slug);
         $channel = $channel->updateDetails($request);
 
-        return redirect(route('blog.channel.show',['slug' => $slug]));
+        return redirect(route('blog.channels'));
     }
 }

@@ -79,7 +79,15 @@ class Channel extends Model
     }
 
 
-    
+    public function updateDetails($request){
+
+
+        $this->name = $request->name;
+        $this->slug =str_slug($request->name, '-');
+        $this->updated_at = now();
+        $this->save();
+        return $this;
+    }
     public function posts(){
 
             return $this->hasMany('\App\Models\Post','channel_id','id');
