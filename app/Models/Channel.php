@@ -97,4 +97,8 @@ class Channel extends Model
 
         return $this->hasOne('\App\Models\Owner','id','owner_id');
     }
+
+    public function users(){
+        return $this->belongsToMany('\App\Models\User','channel_id','user_id');
+    }
 }

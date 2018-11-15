@@ -77,6 +77,11 @@ class User extends Authenticatable
 
         return $this->hasMany('\App\Models\Owner','user_id','id');
     }
+
+    public function channel(){
+
+        return $this->belongsToMany('\App\Models\Channel','user_id','channel_id');
+    }
     
 
 }
