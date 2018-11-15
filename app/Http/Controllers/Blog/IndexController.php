@@ -14,7 +14,7 @@ class IndexController extends Controller
         return view('pages.blog.index',[
             
             'categories' => Category::active()->get(),
-            'posts' => Post::active()->get(),
+            'posts' => Post::active()->orderBy('id','DESC')->get(),
         ]);
     }
 }
