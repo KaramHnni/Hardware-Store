@@ -29,4 +29,10 @@ class Owner extends Model
             return " Active " ; 
         }
     }
+
+
+    public function channels(){
+
+        return $this->hasMany('\App\Models\Channel','owner_id','id');
+    }
 }
