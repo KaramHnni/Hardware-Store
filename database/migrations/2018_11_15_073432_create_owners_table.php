@@ -16,7 +16,6 @@ class CreateOwnersTable extends Migration
         Schema::create('owners', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
-            $table->integer('channel_id');
             $table->timestamps();
         });
     }
