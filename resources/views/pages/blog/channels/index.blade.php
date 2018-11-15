@@ -15,8 +15,8 @@ Create A new Channel
         <div class="px-4 flex justify-around items-center flex-wrap">
             @if($channels->count() > 0 )
             @foreach($channels as $channel)
-            <article style="width:200px;height:70px;" class="flex  shadow border border-solid border-grey-light my-12 pb-8">
-                <img style="height:70px;" class="w-16 bg-grey-light" src="{{asset("/images/Blog/Channels/Channel_Images/$channel->image")}}">            
+            <article style="width:200px" class="flex  shadow border border-solid border-grey-light my-12 pb-8">
+                <img style="block full-h" class="w-16 bg-grey-light" src="{{asset("/images/Blog/Channels/Channel_Images/$channel->image")}}">            
                 <div class="flex-grow">
                 <a href="/blog/Channels/{{$channel->slug}}" class="block px-4 font-bold pt-4">{{$channel->name}}</a>
                 <p class=" px-2 pt-2 text-sm text-grey-dark">followers: xxx</p>
