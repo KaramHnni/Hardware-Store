@@ -92,10 +92,7 @@ class Channel extends Model
             return $this->hasMany('\App\Models\Post','channel_id','id');
     }
 
-    public function user(){
-        return $this->hasOne('\App\Models\User','id','user_id');
-    }
-
+   
     public function owner(){
 
         return $this->hasOne('\App\Models\Owner','id','owner_id');

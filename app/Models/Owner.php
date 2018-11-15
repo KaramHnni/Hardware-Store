@@ -62,4 +62,9 @@ class Owner extends Model
 
         return $this->hasMany('\App\Models\Channel','owner_id','id');
     }
+
+    public function user(){
+
+        return $this->hasOne('\App\Models\User','id','user_id');
+    }
 }

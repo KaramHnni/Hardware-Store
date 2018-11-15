@@ -15,7 +15,7 @@
     <div class="flex justify-between  items-center ">
     <div >
         <h1 class="text-5xl font-bold mb-4">{{$channel->name}}</h1>
-        <p class="text-grey-dark" >Owned By : {{$channel->owner_id}}</p>
+        <p class="text-grey-dark" >Owned By : {{$channel->owner->user->fullName}}</p>
     </div>
     <div>
         <div class="relative">
