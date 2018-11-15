@@ -30,6 +30,23 @@ class Owner extends Model
         }
     }
 
+    public static function active(){
+       
+        return self::where('status',1);
+    }
+ 
+    public function setActive(){
+        $this->status = 1;
+        $this->updated_at = now();
+        $this->save();
+    }
+ 
+    public function setInactive(){
+        $this->status = 0;
+        $this->updated_at = now();
+        $this->save();
+    }
+
 
     public function channels(){
 
