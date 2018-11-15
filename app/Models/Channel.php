@@ -58,12 +58,11 @@ class Channel extends Model
         return self::where('user_id',auth()->user()->id);
     }
 
-    public function store($request){
+    public function store($request,$id){
 
         $channel = new self;
-
         $channel->name = $request->name;
-        $channel->user_id = auth()->user()->id;
+        $channel->owner_id = $id;;
         $channel->slug =str_slug($request->name , '-');
         if($request->hasFile('channel_image')){
                 $image = $request->file('channel_image');

@@ -11,7 +11,7 @@ class Owner extends Model
      *
      * @var string
      */
-    protected $table = 'posts';
+    protected $table = 'owners';
     
     /**
      * Indicates if the model should be timestamped.
@@ -45,6 +45,16 @@ class Owner extends Model
         $this->status = 0;
         $this->updated_at = now();
         $this->save();
+    }
+
+    public function store($id){
+
+        $owner = new self;
+        $owner->user_id =$id;
+        $owner->status = 1;
+        $owner->save();
+        return $owner;
+
     }
 
 

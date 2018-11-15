@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Blog\Channel;
 
+use App\Models\Owner;
 use App\Models\Category;
 use App\Models\Channel;
 use Illuminate\Http\Request;
@@ -22,7 +23,9 @@ class CreateController extends Controller
 
 
         $channel = new Channel;
-       $channel =  $channel->store($request);
+        $owner = new Owner; 
+        $owner = $owner->store(auth()->user()->id);
+       $channel =  $channel->store($request,$owner->id);
         return redirect(route('blog.show'));
 
         
