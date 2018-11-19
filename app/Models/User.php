@@ -80,7 +80,7 @@ class User extends Authenticatable
 
     public function channel(){
 
-        return $this->belongsToMany('\App\Models\Channel','user_id','channel_id');
+        return $this->belongsToMany('\App\Models\Channel');
     }
     
 

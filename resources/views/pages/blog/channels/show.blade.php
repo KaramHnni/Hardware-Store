@@ -16,6 +16,7 @@
     <div >
         <h1 class="text-5xl font-bold mb-4">{{$channel->name}}</h1>
         <p class="text-grey-dark" >Owned By : {{$channel->owner->user->fullName}}</p>
+    <a href="{{route('blog.channel.follow',$channel->slug)}}">Follow This Channel</a>
     </div>
     <div>
         <div class="relative">

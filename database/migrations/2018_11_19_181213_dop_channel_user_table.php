@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateChannelUserTable extends Migration
+class DopChannelUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateChannelUserTable extends Migration
      */
     public function up()
     {
-        Schema::drop('channel_user');
+        //
     }
 
     /**
@@ -23,6 +23,6 @@ class CreateChannelUserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('channel_user');
+        //
     }
 }

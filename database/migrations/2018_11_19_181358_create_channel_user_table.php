@@ -13,7 +13,10 @@ class CreateChannelUserTable extends Migration
      */
     public function up()
     {
-        Schema::drop('channel_user');
+        Schema::create('channel_user', function (Blueprint $table) {
+            $table->integer('channel_id');
+            $table->integer('user_id');
+        });
     }
 
     /**
