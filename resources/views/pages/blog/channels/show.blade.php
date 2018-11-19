@@ -16,7 +16,12 @@
     <div >
         <h1 class="text-5xl font-bold mb-4">{{$channel->name}}</h1>
         <p class="text-grey-dark" >Owned By : {{$channel->owner->user->fullName}}</p>
+        @if( ! $channel->users()->where('user_id',auth()->user()->id)->exists())
     <a href="{{route('blog.channel.follow',$channel->slug)}}">Follow This Channel</a>
+        @else
+        <a href="{{route('blog.channel.unfollow',$channel->slug)}}">Unfollow This Channel</a>
+
+        @endif
     </div>
     <div>
         <div class="relative">

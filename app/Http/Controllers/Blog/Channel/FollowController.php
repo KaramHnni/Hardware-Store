@@ -15,9 +15,14 @@ class FollowController extends Controller
         $channel->users()->attach(auth()->user()->id);
 
         return redirect()->back()->with('followed',true);
+    }
 
+    public function unfollow($slug){
 
-        
+        $channel = Channel::fetchBySlug($slug);
 
+        $channel->users()->detach(auth()->user()->id);
+
+        return redirect()->back()->with('unfollowed',true);
     }
 }
