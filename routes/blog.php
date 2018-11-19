@@ -13,6 +13,8 @@
 Route::get('/','IndexController@show')->name('blog.show');
 Route::group(['prefix' => 'Posts' , 'namespace' => 'Post'],function(){
     Route::get('/{slug}','IndexController@show')->name('blog.post.show');
+    Route::get('/{slug}/like','LikeController@like')->name('blog.post.like');
+    Route::get('/{slug}/dislike','LikeController@dislike')->name('blog.post.dislike');
 
 });
 Route::group(['prefix' => 'Channels' , 'namespace' => 'Channel'],function(){
