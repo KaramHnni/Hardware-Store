@@ -23,6 +23,7 @@ Route::group(['prefix' => 'Channels' , 'namespace' => 'Channel'],function(){
     Route::post('/{slug}/edit','EditController@update');
     Route::get('/{slug}/delete','DeleteController@delete')->name('blog.channel.delete');
     Route::get('/{slug}/follow','FollowController@follow')->name('blog.channel.follow');
+    Route::get('/{slug}/unfollow','FollowController@unfollow')->name('blog.channel.unfollow');
 });
 Route::group(['middleware' => 'auth'],function(){
     Route::get('/create-new-post','Post\CreateController@show')->name('blog.post.create');
