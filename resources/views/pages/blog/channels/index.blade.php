@@ -19,7 +19,7 @@ Create A new Channel
                 <img style="block full-h" class="w-16 bg-grey-light" src="{{asset("/images/Blog/Channels/Channel_Images/$channel->image")}}">            
                 <div class="flex-grow">
                 <a href="/blog/Channels/{{$channel->slug}}" class="block px-4 font-bold pt-4">{{$channel->name}}</a>
-                <p class=" px-2 pt-2 text-sm text-grey-dark">followers: xxx</p>
+                <p class=" px-2 pt-2 text-sm text-grey-dark">followers: {{$channel->users()->count()}}</p>
             </div>
             </article>
             @endforeach
