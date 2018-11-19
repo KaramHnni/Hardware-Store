@@ -92,4 +92,9 @@ class Post extends Model
 
         return $this->hasOne('\App\Models\Channel','id','channel_id');
     }
+
+    public function users(){
+
+        return $this->belongsToMany('\App\Models\User');
+    }
 }

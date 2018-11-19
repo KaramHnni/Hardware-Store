@@ -79,6 +79,11 @@ class User extends Authenticatable
 
         return $this->belongsToMany('\App\Models\Channel');
     }
+
+    public function posts(){
+
+        return $this->belongsToMany('\App\Models\Posts');
+    }
     
 
 }
