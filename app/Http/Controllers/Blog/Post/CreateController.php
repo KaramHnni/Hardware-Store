@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Blog\Post;
 
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\Publisher;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -23,7 +24,9 @@ class CreateController extends Controller
 
 
             $post = new Post;
-           $post =  $post->store($request);
+            $publisher = new Publisher;
+            $publisher = $publisher->store(auth()->user()->id);
+            $post =  $post->store($request,$publisher->id);
             return redirect(route('blog.show'));
 
             

@@ -62,7 +62,7 @@ class Channel extends Model
 
         $channel = new self;
         $channel->name = $request->name;
-        $channel->owner_id = $id;;
+        $channel->owner_id = $id;
         $channel->slug =str_slug($request->name , '-');
         if($request->hasFile('channel_image')){
                 $image = $request->file('channel_image');
@@ -96,6 +96,7 @@ class Channel extends Model
     public function owner(){
 
         return $this->hasOne('\App\Models\Owner','id','owner_id');
+        
     }
 
     public function users(){

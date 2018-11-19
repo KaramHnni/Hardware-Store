@@ -55,13 +55,13 @@ class Post extends Model
         return self::where('user_id',auth()->user()->id);
     }
 
-    public function store($request){
+    public function store($request,$id){
 
         $post = new self;
 
         $post->title = $request->title;
         $post->body = $request->body;
-        $post->user_id = auth()->user()->id;
+        $post->publisher_id = $id;
         $post->category_id = $request->category;
         $post->slug =str_slug($request->title , '-');
             if($request->hasFile('cover_image')){
@@ -82,9 +82,9 @@ class Post extends Model
         return $this->hasOne('\App\Models\Category', 'id', 'category_id');
     }
 
-    public function user(){
+    public function publisher(){
 
-        return $this->hasOne('\App\Models\User','id','user_id');
+        return $this->hasOne('\App\Models\Publisher','id','publisher_id');
     }
 
     public function channel(){
