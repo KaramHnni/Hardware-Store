@@ -66,10 +66,7 @@ class User extends Authenticatable
         $user->save();
     }
 
-    public function posts(){
-
-        return $this->hasMany('\App\Models\Post','user_id','id');
-    }
+    
 
    
 
