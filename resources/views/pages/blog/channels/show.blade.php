@@ -14,7 +14,10 @@
 <div class="w-4/5 mx-auto my-12">
     <div class="flex justify-between  items-center ">
     <div >
-        <h1 class="text-5xl font-bold mb-4">{{$channel->name}}</h1>
+            <div class="flex items-center">
+                    <h1 class="text-5xl font-bold">{{$channel->name}}</h1>
+                    <a href = "{{route('blog.post.create')}}" class="inline-block mx-4 py-4 px-4  font-semibold rounded border border-soliid border-blue-dark text-blue-dark bg-white ">Create A post</a>
+                    </div>
         <p class="text-grey-dark" >Owned By : {{$channel->owner->user->fullName}}</p>
         @if( ! $channel->users()->where('user_id',auth()->user()->id)->exists())
     <a href="{{route('blog.channel.follow',$channel->slug)}}">Follow This Channel</a>
