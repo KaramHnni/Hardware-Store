@@ -63,7 +63,8 @@ class Post extends Model
         $post->body = $request->body;
         $post->publisher_id = $id;
         $post->category_id = $request->category;
-        $post->slug =str_slug($request->title , '-');
+        $post->slug = str_slug($request->title , '-');
+        $post->channel_id = $request->channel;
             if($request->hasFile('cover_image')){
                 $image = $request->file('cover_image');
                 $filenameToStore = $image->getClientOriginalName(). '__' . time() . '.' .$image->getClientOriginalExtension() ;
@@ -89,6 +90,6 @@ class Post extends Model
 
     public function channel(){
 
-        return $this->hasOne('\App\Models\Channel','id','user_id');
+        return $this->hasOne('\App\Models\Channel','id','channel_id');
     }
 }

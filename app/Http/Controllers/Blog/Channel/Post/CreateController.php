@@ -1,18 +1,20 @@
 <?php
 
-namespace App\Http\Controllers\Blog\Post;
+namespace App\Http\Controllers\Blog\Channel\Post;
 
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\Publisher;
+use App\Models\Channel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class CreateController extends Controller
 {
-    public function show(){
-        return view('pages.blog.posts.create',[
+    public function show($slug){
+        return view('pages.blog.channels.posts.create',[
             'categories' => Category::active()->get(),
+            'channel' => Channel::fetchBySlug($slug),
         ]);
            }
 

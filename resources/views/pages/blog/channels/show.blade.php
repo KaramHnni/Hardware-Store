@@ -16,7 +16,7 @@
     <div >
             <div class="flex items-center">
                     <h1 class="text-5xl font-bold">{{$channel->name}}</h1>
-                    <a href = "{{route('blog.post.create')}}" class="inline-block mx-4 py-4 px-4  font-semibold rounded border border-soliid border-blue-dark text-blue-dark bg-white ">Create A post</a>
+                    <a href = "{{route('blog.post.create',$channel->slug)}}" class="inline-block mx-4 py-4 px-4  font-semibold rounded border border-soliid border-blue-dark text-blue-dark bg-white ">Create A post</a>
                     </div>
         <p class="text-grey-dark" >Owned By : {{$channel->owner->user->fullName}}</p>
         @if( ! $channel->users()->where('user_id',auth()->user()->id)->exists())
