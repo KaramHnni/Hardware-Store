@@ -19,8 +19,8 @@
             <div class="relative">
             <a class="inlune-block px-2 bg-black text-white ">...</a>
                 <ul class="absolute list-reset px-4 shadow">
-                    <li class=" py-4"><a href="{{route('blog.channel.edit',['slug' => $post->slug])}}">Edit Your post</a></li>
-                    <li class="py-4"><a href="{{route('blog.channel.delete',['slug' => $post->slug])}}">Delete Your post</a></li>
+                    <li class=" py-4"><a href="{{route('blog.post.edit',['slug' => $post->slug])}}">Edit Your post</a></li>
+                    <li class="py-4"><a href="{{route('blog.post.delete',['slug' => $post->slug])}}">Delete Your post</a></li>
                 </ul>
             </div>
         </div>

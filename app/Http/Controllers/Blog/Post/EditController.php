@@ -13,7 +13,19 @@ class EditController extends Controller
 
         return view('pages.blog.posts.edit',[
             'categories' => Category::active()->get(),
-            'post'  => Channel::fetchBySlug($slug),
+            'post'  => Post::fetchBySlug($slug),
         ]);
+}
+
+
+public function update(Request $request, $slug){
+
+    $post = Post::fetchBySlug($slug);
+    $post = $post->updateDetails($request);
+
+    return redirect(route('blog.post.show',[
+        'slug' => $post->slug,
+    
+    ]));
 }
 }
