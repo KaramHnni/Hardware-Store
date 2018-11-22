@@ -20,7 +20,8 @@
                 <a href="/blog/Posts/{{$post->slug}}"class="block text-xl my-12 mx-4 ">Continue Reading > </a>
                 </div>
             </article>
-            @endforeach
+            @endforeach            
+
 
             @else
 

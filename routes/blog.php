@@ -26,12 +26,15 @@ Route::group(['prefix' => 'Channels' , 'namespace' => 'Channel'],function(){
     Route::get('/{slug}/delete','DeleteController@delete')->name('blog.channel.delete');
     Route::get('/{slug}/follow','FollowController@follow')->name('blog.channel.follow');
     Route::get('/{slug}/unfollow','FollowController@unfollow')->name('blog.channel.unfollow');
+    Route::group(['middleware' => 'auth'],function(){
+        Route::get('/{slug}/create-new-post','Post\CreateController@show')->name('blog.post.create');
+        Route::post('/{slug}/create-new-post','Post\CreateController@create');
+    });
     
-    Route::get('/{slug}/create-new-post','Post\CreateController@show')->name('blog.post.create');
-    Route::post('/{slug}/create-new-post','Post\CreateController@create');
-
-    
+  
 });
+
+
 Route::group(['middleware' => 'auth'],function(){
 
     Route::get('/create-new-channel' , 'Channel\CreateController@show')->name('blog.channel.create');
