@@ -83,11 +83,11 @@ class Post extends Model
 
         $this->title = $request->title;
         $this->slug =str_slug($request->title, '-');
-        $this->body = $request->body
+        $this->body = $request->body;
         $this->updated_at = now();
         $this->save();
         return $this;
-
+    }
     public function category(){
 
         return $this->hasOne('\App\Models\Category', 'id', 'category_id');
