@@ -10,11 +10,16 @@ use App\Http\Controllers\Controller;
 class EditController extends Controller
 {
     public function show($slug){
-        
+        $post  = Post::fetchBySlug($slug);
+
+        if($post->publisher->user_id == auth()->user()->id){
         return view('pages.blog.posts.edit',[
             'categories' => Category::active()->get(),
-            'post'  => Post::fetchBySlug($slug),
+            'post'  => $post,
         ]);
+        }else{
+            return redirect()->back();
+        }
 }
 
 

@@ -9,11 +9,15 @@ use App\Http\Controllers\Controller;
 class DeleteController extends Controller
 {
     public function delete($slug){
+        if($channel->owner->user->id == auth()->user()->id){
 
         $channel = Channel::fetchBySlug($slug);
         $channel = $channel->delete();
 
         return redirect(route('blog.channels'));
+        }else{
+            return redirect()->back();
+        }
 
     }
 }

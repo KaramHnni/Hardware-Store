@@ -18,7 +18,8 @@ class EditController extends Controller
             'channel' => $channel,
             
         ]);
-        }else{
+        }
+        else{
             return redirect()->back();
         }
         
