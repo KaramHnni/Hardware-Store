@@ -36,6 +36,12 @@ Route::group(['prefix' => 'Channels' , 'namespace' => 'Channel'],function(){
     });
 });
 
+Route::group(['prefix' => 'Categories' , 'namespace' => 'Category'],function(){
+
+    Route::get('/','MainController@redirectToMain')->name('blog.main');
+    Route::get('/{slug}','CategoriesController@show')->name('blog.categories');
+});
+
 
 Route::group(['middleware' => 'auth'],function(){
 

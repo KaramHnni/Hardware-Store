@@ -29,6 +29,10 @@ class Category extends Model
        }
    }
 
+   public static function fetchBySlug($slug){
+    return self::where('slug',$slug)->first();
+}
+
    public static function active(){
 
        return self::where('status',1);
