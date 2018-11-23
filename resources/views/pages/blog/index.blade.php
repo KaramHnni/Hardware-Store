@@ -12,14 +12,22 @@
         <div class="px-4 flex justify-around items-center flex-wrap">
             @if($posts->count() > 0 )
             @foreach($posts as $post)
-            <article style="width:400px; height:550px;" class=" shadow border border-solid border-grey-light my-8">
-                <img style="height:300px;" class="block w-full bg-grey-light" src="{{asset("/images/Blog/Posts/Cover_Images/$post->image")}}">
-                <div class="h-64">
-                <p class=" my-12 mx-4 text-2xl font-bold " >{{$post->title}}</p>
-            <p class=" my-12 mx-4 text-xl" >{{substr($post->body,0,40)}} ...</p>
-                <a href="/blog/Posts/{{$post->slug}}"class="block text-xl my-12 mx-4 ">Continue Reading > </a>
-                </div>
-            </article>
+                @component('components.blog.article-card')
+
+                    @slot('link_image')
+                    {{asset("/images/Blog/Posts/Cover_Images/$post->image")}}                    
+                    @endslot
+                    @slot('article_title')
+                    {{$post->title}}
+                    @endslot
+                    @slot('article_body_part')
+                    {{substr($post->body,0,40)}}
+                    @endslot
+                    @slot('article_slug')
+                    {{$post->slug}}
+                    @endslot
+                @endcomponent
+
             @endforeach            
 
 
