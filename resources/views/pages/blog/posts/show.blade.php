@@ -13,8 +13,10 @@
 
 <div class="w-4/5 mx-auto my-12">
     <div class="flex items-center justify-between">
-        <h1 class="text-5xl font-bold mb-4">{{$post->title}}</h1>
-
+        <div class="relative">
+        <img class="" style=" width : 500px; height : 300px;" src="{{asset("/images/Blog/Posts/Cover_Images/$post->image")}}">
+        <h1 class="pin-b  absolute text-red text-3xl font-bold mb-4">{{$post->title}}</h1>
+        </div>
         @auth
         @if($post->publisher->user_id == auth()->user()->id)
         <div>
