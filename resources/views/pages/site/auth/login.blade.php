@@ -3,10 +3,19 @@
     Login
 @endsection
 @section('main-content')
+
+
 <div class="bg-green-lightest w-full pb-12">
 @include('components.site.main-header')
-<form method="POST" action="{{route('login')}}" class=" py-4 px-8 w-1/2 bg-white rounded shadow mx-auto mt-32">
+<form method="POST" action="{{route('login')}}" class=" relative py-4 px-8 w-1/2 bg-white rounded shadow mx-auto mt-32">
     @csrf
+    @if(session('credentials'))
+    @component('components.alert',['type' => 'danger'])
+    @slot('content')
+        Your Credentials doesn't match with our records
+    @endslot
+    @endcomponent
+@endif
     <div class="my-8">
         <label for="email" class="block font-semi-bold text-orange-dark mb-4">E-Mail</label>
         <input id="email" name="email" type="email" class="w-2/3 border border-solid border-grey-dark rounded py-2 px-4">

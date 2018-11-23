@@ -16,8 +16,14 @@ class RegisterController extends Controller
     public function register(Request $request){
         
         $user = new User;
+        if(User::active()->where('email',$request->email)){
+            return redirect()->back()->with(['credentials' => true]);
+        }
+        else{
         $user->registerNewUser($request);
+        
         Auth::attempt(['email' => $request->email , 'password' => $request->password]);
         return redirect()->intended('user/dashboard');
     }
+}
 }
