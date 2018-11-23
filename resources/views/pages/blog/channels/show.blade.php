@@ -28,15 +28,20 @@
         @endif
         @endauth
     </div>
+    
+    @auth
+    @if($channel->owner->user->id == auth()->user()->id)
     <div>
         <div class="relative">
         <a class="inlune-block px-2 bg-black text-white ">...</a>
             <ul class="absolute list-reset px-4 shadow">
-                <li class=" py-4"><a href="{{route('blog.channel.edit',['slug' => $channel->slug])}}">Edit Your Channel</a></li>
+            <li class=" py-4"><a href="{{route('blog.channel.edit',['slug' => $channel->slug])}}">Edit Your Channel</a></li>
                 <li class="py-4"><a href="{{route('blog.channel.delete',['slug' => $channel->slug])}}">Delete Your Channel</a></li>
             </ul>
         </div>
     </div>
+    @endif
+    @endauth
     </div>
     <div>
         @if($channel->posts->count() > 0 )

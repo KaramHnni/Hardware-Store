@@ -15,6 +15,7 @@
     <div class="flex items-center justify-between">
         <h1 class="text-5xl font-bold mb-4">{{$post->title}}</h1>
 
+        
         <div>
             <div class="relative">
             <a class="inlune-block px-2 bg-black text-white ">...</a>
@@ -24,6 +25,7 @@
                 </ul>
             </div>
         </div>
+        
     </div>
         <p class="text-grey-dark" >Written on {{$post->channel->name}} By : {{$post->publisher->user->fullName}}</p>
         <p class="my-8 text-lg">{{$post->body}}</p>
