@@ -11,11 +11,17 @@ class EditController extends Controller
 {
     public function show($slug){
 
+        $channel = Channel::fetchBySlug($slug);
+        if($channel->owner->user->id == auth()->user()->id){
         return view('pages.blog.channels.edit',[
             'categories' => Category::active()->get(),
-            'channel'  => Channel::fetchBySlug($slug),
+            'channel' => $channel,
+            
         ]);
-
+        }else{
+            return redirect()->back();
+        }
+        
     }
 
 

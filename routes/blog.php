@@ -22,17 +22,16 @@ Route::group(['prefix' => 'Posts' , 'namespace' => 'Post'],function(){
 
 });
 Route::group(['prefix' => 'Channels' , 'namespace' => 'Channel'],function(){
-
     Route::get('/','ChannelsController@show')->name('blog.channels');
     Route::get('/{slug}','IndexController@show')->name('blog.channel.show');
-    Route::get('/{slug}/edit','EditController@show')->name('blog.channel.edit');
-    Route::post('/{slug}/edit','EditController@update');
-    Route::get('/{slug}/delete','DeleteController@delete')->name('blog.channel.delete');
-    Route::get('/{slug}/follow','FollowController@follow')->name('blog.channel.follow');
-    Route::get('/{slug}/unfollow','FollowController@unfollow')->name('blog.channel.unfollow');
     Route::group(['middleware' => 'auth'],function(){
         Route::get('/{slug}/create-new-post','Post\CreateController@show')->name('blog.post.create');
         Route::post('/{slug}/create-new-post','Post\CreateController@create');
+        Route::get('/{slug}/edit','EditController@show')->name('blog.channel.edit');
+        Route::post('/{slug}/edit','EditController@update');
+        Route::get('/{slug}/delete','DeleteController@delete')->name('blog.channel.delete');
+        Route::get('/{slug}/follow','FollowController@follow')->name('blog.channel.follow');
+        Route::get('/{slug}/unfollow','FollowController@unfollow')->name('blog.channel.unfollow');
     });
 });
 

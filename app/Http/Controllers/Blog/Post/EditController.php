@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 class EditController extends Controller
 {
     public function show($slug){
-
+        
         return view('pages.blog.posts.edit',[
             'categories' => Category::active()->get(),
             'post'  => Post::fetchBySlug($slug),
