@@ -19,12 +19,14 @@
                     <a href = "{{route('blog.post.create',$channel->slug)}}" class="inline-block mx-4 py-4 px-4  font-semibold rounded border border-soliid border-blue-dark text-blue-dark bg-white ">Create A post</a>
                     </div>
         <p class="text-grey-dark" >Owned By : {{$channel->owner->user->fullName}}</p>
+        @auth
         @if( ! $channel->users()->where('user_id',auth()->user()->id)->exists())
     <a href="{{route('blog.channel.follow',$channel->slug)}}">Follow This Channel</a>
         @else
         <a href="{{route('blog.channel.unfollow',$channel->slug)}}">Unfollow This Channel</a>
 
         @endif
+        @endauth
     </div>
     <div>
         <div class="relative">
