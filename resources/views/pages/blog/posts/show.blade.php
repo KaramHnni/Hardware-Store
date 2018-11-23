@@ -15,7 +15,8 @@
     <div class="flex items-center justify-between">
         <h1 class="text-5xl font-bold mb-4">{{$post->title}}</h1>
 
-        
+        @auth
+        @if($post->publisher->user_id == auth()->user()->id)
         <div>
             <div class="relative">
             <a class="inlune-block px-2 bg-black text-white ">...</a>
@@ -25,6 +26,8 @@
                 </ul>
             </div>
         </div>
+        @endif
+        @endauth
         
     </div>
         <p class="text-grey-dark" >Written on {{$post->channel->name}} By :

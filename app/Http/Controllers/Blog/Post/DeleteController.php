@@ -11,14 +11,13 @@ class DeleteController extends Controller
     public function delete($slug){
 
         $post = Post::fetchBySlug($slug);
-        if($post->publisher->user_id == auth()->user()->id){
-
-        $post = $post->delete();
-
-        return redirect(route('blog.show'));
+        if($post->publisher->user_id == auth()->user()->id)
+        {
+            $post = $post->delete();
+            return redirect(route('blog.show'));
         }
-        
-        else{
+        else
+        {
             return redirect()->back();
         }
 
