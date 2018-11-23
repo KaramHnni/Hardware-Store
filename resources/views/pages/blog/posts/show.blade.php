@@ -32,22 +32,23 @@
                 @if($post->publisher->user->id == auth()->user()->id)
                 You
                 @else
-            {{$post->publisher->user->fullName}}</p>
-            @endif
+                {{$post->publisher->user->fullName}}</p>
+                @endif
+                <p class="my-8 text-lg">{{$post->body}}</p>
+                @if( ! $post->users()->where('user_id',auth()->user()->id)->exists())
+                    <a href="{{route('blog.post.like',$post->slug)}}" class="my-8 text-lg text-black">Like</a>
+                @else
+                    <a href="{{route('blog.post.dislike',$post->slug)}}" class="my-8 text-lg text-blue font-bold">Liked</a>
+
+                @endif
+
             @endauth
             @guest
-            {{$post->publisher->user->fullName}}</p>
-
+                {{$post->publisher->user->fullName}}</p>
+                <p class="my-8 text-lg">{{$post->body}}</p>
+                <a href="{{route('blog.post.like',$post->slug)}}" class="my-8 text-lg text-black">Like</a>
             @endguest
-        <p class="my-8 text-lg">{{$post->body}}</p>
-        @auth
-    @if( ! $post->users()->where('user_id',auth()->user()->id)->exists())
-        <a href="{{route('blog.post.like',$post->slug)}}" class="my-8 text-lg text-black">Like</a>
-    @else
-
-    <a href="{{route('blog.post.dislike',$post->slug)}}" class="my-8 text-lg text-blue font-bold">Liked</a>
-
-    @endif
-    @endauth
-</div>
+            
+            
+    </div>
 @endsection
