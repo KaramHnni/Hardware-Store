@@ -14,7 +14,7 @@
             @foreach($posts as $post)
                 @component('components.blog.article-card')
                 @slot('article_category')
-                {{$post->category}}
+                {{$post->category->name}}
             @endslot
             @slot('article_date')
                 {{$post->created_at}}
