@@ -19,5 +19,8 @@
         <div class="">
             @yield('main-content')
         </div>
+
+    <script src="{{asset('/assets/js/select2full.js')}}"></script>
+    @yield('scripts')
     </body>
 </html>
