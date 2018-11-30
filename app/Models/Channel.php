@@ -74,6 +74,8 @@ class Channel extends Model
             }
         $channel->image = $filenameToStore;
         $channel->status = 1;
+        $channel->created_at = now();
+        $channel->updated_at = now();
         $channel->save();
     }
 
