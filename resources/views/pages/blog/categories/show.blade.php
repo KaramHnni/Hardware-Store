@@ -13,7 +13,12 @@
             @if($posts->count() > 0 )
             @foreach($posts as $post)
                 @component('components.blog.article-card')
-
+                @slot('article_category')
+                {{$post->category}}
+            @endslot
+            @slot('article_date')
+                {{$post->created_at}}
+            @endslot
                     @slot('link_image')
                     {{asset("/images/Blog/Posts/Cover_Images/$post->image")}}                    
                     @endslot
