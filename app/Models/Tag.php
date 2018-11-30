@@ -50,4 +50,9 @@ class Tag extends Model
         return self::where('slug',$slug)->first();
     }
 
+    public function posts(){
+
+        return $this->belongsToMany('\App\Models\Post');
+    }
+
 }
