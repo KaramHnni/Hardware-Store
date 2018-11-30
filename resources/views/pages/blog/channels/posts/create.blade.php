@@ -21,6 +21,12 @@ Create A new Post
                      <option value="{{$category->id}}">{{$category->name}}</option>
                 @endforeach
             </select>
+            <select class="tags" multiple="multiple" name="tags">
+                    @foreach($tags as $tag)
+
+                    <option value="{{$tag->id}}">{{$tag->name}}</option>
+                    @endforeach
+            </select>
         <input type=hidden name="channel" value="{{$channel->id}}">
             <input type="file" name="cover_image" class="block my-4 ">
             <input type="submit" value="submit your post" class="bg-grey-dark text-white font-semibold inline-block px-4 py-4">
@@ -29,4 +35,11 @@ Create A new Post
         
     </div>
 
+@endsection
+@section('scripts')
+
+      <script>
+      $('.tags').select2();
+      
+      </script>
 @endsection
