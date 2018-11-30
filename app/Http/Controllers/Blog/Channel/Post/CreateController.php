@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Post;
 use App\Models\Publisher;
 use App\Models\Channel;
+use App\Models\Tags;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -15,6 +16,7 @@ class CreateController extends Controller
         return view('pages.blog.channels.posts.create',[
             'categories' => Category::active()->get(),
             'channel' => Channel::fetchBySlug($slug),
+            'tags' => Tag::active()->get(),
         ]);
            }
 

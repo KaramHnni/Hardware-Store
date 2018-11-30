@@ -13,6 +13,7 @@ class CreateController extends Controller
     public function show(){
         return view('pages.blog.channels.create',[
             'categories' => Category::active()->get(),
+            
         ]);
            }
 
