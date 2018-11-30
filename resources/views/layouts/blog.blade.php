@@ -14,17 +14,19 @@
         <!-- Styles -->
         <link href="{{ asset('/assets/css/tailwind.min.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset('/assets/css/blog.css') }}" rel="stylesheet" type="text/css">
-        <link href="{{ asset('css/select2.css') }}" rel="stylesheet" />
-        <script src="https://code.jquery.com/jquery-3.3.1.js"
-			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-			  crossorigin="anonymous"></script>
+        <link href="{{ asset('/assets/css/select2.css') }}" rel="stylesheet" />
+
+        <!-- Scripts --> 
+
+        <script src="{{ asset('/assets/js/jquery.js')}}"></script>
     </head>
     <body>
         <div class="">
             @yield('main-content')
         </div>
+        
 
-    <script src="{{asset('/assets/js/select2full.js')}}"></script>
+    <script src="{{asset('/assets/js/select2.full.js')}}"></script>
     @yield('scripts')
     </body>
 </html>
