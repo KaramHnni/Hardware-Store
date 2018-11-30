@@ -24,7 +24,7 @@ class TagsTableSeeder extends Seeder
             'status' => '1'
         ]); DB::table('tags')->insert([
             'name' => 'Surgery',
-            'slug' => 'Orthopedic Surgery',
+            'slug' => 'surgery',
             'created_at' => now(),
             'status' => '1'
         ]);  
