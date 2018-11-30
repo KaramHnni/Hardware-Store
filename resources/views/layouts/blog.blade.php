@@ -15,6 +15,9 @@
         <link href="{{ asset('/assets/css/tailwind.min.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset('/assets/css/blog.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset('css/select2.css') }}" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.3.1.js"
+			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			  crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="">
