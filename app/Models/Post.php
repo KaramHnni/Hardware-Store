@@ -75,6 +75,8 @@ class Post extends Model
             }
         $post->image = $filenameToStore;
         $post->status = 1;
+        $channel->created_at = now();
+        $channel->updated_at = now();
         $post->save();
     }
 
