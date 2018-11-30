@@ -17,7 +17,8 @@
         @csrf
 
     <input type="text" value="{{$channel->name}}" placeholder="Channel's name" name="name" class="px-2 py-4 w-full  my-8 block border-b border-solid border-grey-light text-2xl text-grey-dark font-bold ">
-        <input type="submit" value="Edit Your Channel" class="bg-grey-dark text-white font-semibold inline-block px-4 py-4">
+
+    <input type="submit" value="Edit Your Channel" class="bg-grey-dark text-white font-semibold inline-block px-4 py-4">
     </form>
         
 

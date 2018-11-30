@@ -88,6 +88,16 @@ class Post extends Model
         $this->title = $request->title;
         $this->slug =str_slug($request->title, '-');
         $this->body = $request->body;
+        if($request->hasFile('cover_image')){
+            $image = $request->file('cover_image');
+            $filenameToStore = $image->getClientOriginalName(). '__' . time() . '.' .$image->getClientOriginalExtension() ;
+            $path = public_path('/images/Blog/Posts/Cover_Images');
+            $image->move($path, $filenameToStore);
+
+        }else{
+            $filenameToStore = $this->image;
+        }
+        $this->image=$filenameToStore;
         $this->updated_at = now();
         $this->save();
         return $this;
