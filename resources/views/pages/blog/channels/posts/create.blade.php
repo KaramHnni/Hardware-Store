@@ -21,7 +21,7 @@ Create A new Post
                      <option value="{{$category->id}}">{{$category->name}}</option>
                 @endforeach
             </select>
-            <select class="tag w-4/5" multiple="multiple" name="tags">
+            <select class="tag w-4/5" multiple="multiple"name="tags[]">
                     @foreach($tags as $tag)
 
                     <option value="{{$tag->id}}">{{$tag->name}}</option>
@@ -38,7 +38,11 @@ Create A new Post
 @endsection
 @section('scripts')
 
-      <script>$('.tag').select2();
+      <script>
+      $('.tag').select2();
+
+      
+      
       
         </script>
 @endsection

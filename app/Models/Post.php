@@ -75,9 +75,11 @@ class Post extends Model
             }
         $post->image = $filenameToStore;
         $post->status = 1;
-        $channel->created_at = now();
-        $channel->updated_at = now();
+        $post->created_at = now();
+        $post->updated_at = now();
         $post->save();
+        $post->tags()->sync($request->tags, false); 
+
     }
 
     public function updateDetails($request){
