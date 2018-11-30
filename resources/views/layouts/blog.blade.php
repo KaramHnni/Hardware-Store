@@ -14,6 +14,7 @@
         <!-- Styles -->
         <link href="{{ asset('/assets/css/tailwind.min.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset('/assets/css/blog.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('css/select2.css') }}" rel="stylesheet" />
     </head>
     <body>
         <div class="">
