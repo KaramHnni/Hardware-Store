@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models;
+use Carbon\Carbon;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -27,6 +28,10 @@ class Post extends Model
         if($this->status == true){
             return " Active " ; 
         }
+    }
+
+    public function getCreatedAtFormatAttribute(){
+        return date('d-m-Y',strtotime($this->created_at));
     }
 
     public static function active(){

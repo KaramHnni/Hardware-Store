@@ -17,7 +17,7 @@
                         {{$post->category->name}}
                     @endslot
                     @slot('article_date')
-                        {{$post->created_at}}
+                        {{$post->CreatedAtFormat}}
                     @endslot
                     @slot('link_image')
                     {{asset("/images/Blog/Posts/Cover_Images/$post->image")}}                    
