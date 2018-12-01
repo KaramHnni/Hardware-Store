@@ -5,8 +5,9 @@
         </div>
         <img style="height:300px;" class="block w-full bg-grey-light" src="{{$link_image}}">
         <div>
-        <p style="height:25px;" class=" my-12 mx-4 text-xl font-bold " >{{$article_title}}</p>
-        <p style="height:50px;" class=" mx-4 text-xl" >{{$article_body_part}}...</p>
+        <p style="height:25px;" class=" mt-4 mx-4 text-xl font-bold " >{{$article_title}}</p>
+        <div style="height:25px;" class="mt-4 flex items-center">{{$article_tags}}</div>
+        <p style="height:50px;" class=" mt-4 mx-4 text-xl" >{{$article_body_part}}...</p>
         <a href="/blog/Posts/{{$article_slug}}"class="block text-xl my-12 mx-4 ">Continue Reading > </a>
         </div>
     </article>

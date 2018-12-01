@@ -47,3 +47,6 @@ nav{
 .profile--dropdown--trigger:hover > .profile--dropdown--menu{
     display:block;
 }
+.tag--bubble{
+    background: #250341;
+}

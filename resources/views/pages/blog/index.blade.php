@@ -25,9 +25,17 @@
                     @slot('article_title')
                     {{$post->title}}
                     @endslot
+
+                    @slot('article_tags')
+
+                    @foreach($post->tags as $tag) 
+                        <div class="inline-block rounded mx-2 px-4 py-1  text-white font-bold tag--bubble">{{$tag->name}}</div>
+                    @endforeach
+                    @endslot
                     @slot('article_body_part')
                     {{substr($post->body,0,40)}}
                     @endslot
+                    
                     @slot('article_slug')
                     {{$post->slug}}
                     @endslot
