@@ -22,6 +22,7 @@ class IndexController extends Controller
             'categories' => Category::active()->get(),
             'posts' => $posts,
             
+            
         ]);
     }
 }

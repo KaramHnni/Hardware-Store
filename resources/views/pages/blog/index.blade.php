@@ -8,7 +8,7 @@
 @include('components.blog.secondary-header')
     <div class="w-4/5 mx-auto my-12">
         <section class="my-4">
-        <h1 class="text-center font-bold text-2xl mb-12 ">Our Latest Posts</h1>
+        <h1 class="text-center font-bold text-2xl mb-12 ">@if(request('tag')) {{strtoupper(request('tag'))}} @endif Latest Posts</h1>
         <div class="px-4 flex justify-around items-center flex-wrap">
             @if($posts->count() > 0 )
             @foreach($posts as $post)
@@ -29,7 +29,7 @@
                     @slot('article_tags')
 
                     @foreach($post->tags as $tag) 
-                    <a href="/blog?tag= {{$tag->slug}}" class="inline-block rounded mx-2 px-4 py-1  text-white font-bold tag--bubble">{{$tag->name}}</a>
+                    <a href="/blog?tag={{strtoupper($tag->slug)}}" class="inline-block rounded mx-2 px-4 py-1  text-white font-bold tag--bubble">{{$tag->name}}</a>
                     @endforeach
                     @endslot
                     @slot('article_body_part')
