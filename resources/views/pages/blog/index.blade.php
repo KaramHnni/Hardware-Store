@@ -29,7 +29,7 @@
                     @slot('article_tags')
 
                     @foreach($post->tags as $tag) 
-                        <div class="inline-block rounded mx-2 px-4 py-1  text-white font-bold tag--bubble">{{$tag->name}}</div>
+                    <a href="/blog?tag= {{$tag->slug}}" class="inline-block rounded mx-2 px-4 py-1  text-white font-bold tag--bubble">{{$tag->name}}</a>
                     @endforeach
                     @endslot
                     @slot('article_body_part')
