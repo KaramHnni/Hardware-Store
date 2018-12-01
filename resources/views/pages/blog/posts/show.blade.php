@@ -13,9 +13,9 @@
 
 <div class="w-4/5 mx-auto my-12">
     <div class="flex items-center justify-between">
-        <div class="relative">
-        <img class="" style=" width : 500px; height : 300px;" src="{{asset("/images/Blog/Posts/Cover_Images/$post->image")}}">
-        <h1 class="pin-b  absolute text-red text-3xl font-bold mb-4">{{$post->title}}</h1>
+        <div  style="width:600px;"class="relative">
+        <img class="" style="" src="{{asset("/images/Blog/Posts/Cover_Images/$post->image")}}">
+        <h1 class=" text-black text-3xl font-semibold my-4">{{$post->title}}</h1>
         </div>
         @auth
         @if($post->publisher->user_id == auth()->user()->id)
@@ -50,7 +50,7 @@
             @endauth
             @guest
                 {{$post->publisher->user->fullName}}</p>
-                <p class="my-8 text-lg">{{$post->body}}</p>
+                <p class="my-8 text-xl">{{$post->body}}</p>
                 <a href="{{route('blog.post.like',$post->slug)}}" class="my-8 text-lg text-black">Like</a>
             @endguest
             

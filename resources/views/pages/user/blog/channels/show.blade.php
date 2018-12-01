@@ -11,13 +11,34 @@ My Channels
         <div class="px-4 flex justify-around items-center flex-wrap">
             @if($channels->count() > 0 )
             @foreach($channels as $channel)
-            <article style="width:200px;height:70px;" class="flex  shadow border border-solid border-grey-light my-12 pb-8">
-                <img style="height:70px;" class="w-16 bg-grey-light" src="{{asset("/images/Blog/Channels/Channel_Images/$channel->image")}}">            
-                <div class="flex-grow">
-                <a href="/blog/Channels/{{$channel->slug}}" class="block px-4 font-bold pt-4">{{$channel->name}}</a>
-                <p class=" px-2 pt-2 text-sm text-grey-dark">followers: xxx</p>
-            </div>
-            </article>
+            @component('components.blog.article-card')
+            @slot('article_category')
+                {{$post->category->name}}
+            @endslot
+            @slot('article_date')
+                {{$post->CreatedAtFormat}}
+            @endslot
+            @slot('link_image')
+            {{asset("/images/Blog/Posts/Cover_Images/$post->image")}}                    
+            @endslot
+            @slot('article_title')
+            {{$post->title}}
+            @endslot
+
+            @slot('article_tags')
+
+            @foreach($post->tags as $tag) 
+            <a href="/blog?tag={{strtoupper($tag->slug)}}" class="inline-block rounded mx-2 px-4 py-1  text-white font-bold tag--bubble">{{$tag->name}}</a>
+            @endforeach
+            @endslot
+            @slot('article_body_part')
+            {{substr($post->body,0,40)}}
+            @endslot
+            
+            @slot('article_slug')
+            {{$post->slug}}
+            @endslot
+        @endcomponent
             @endforeach
 
             @else

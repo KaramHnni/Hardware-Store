@@ -52,7 +52,7 @@
                 {{$post->category->name}}
             @endslot
             @slot('article_date')
-                {{$post->created_at}}
+                {{$post->CreatedAtFormat}}
             @endslot
             @slot('link_image')
             {{asset("/images/Blog/Posts/Cover_Images/$post->image")}}                    
@@ -60,9 +60,17 @@
             @slot('article_title')
             {{$post->title}}
             @endslot
+
+            @slot('article_tags')
+
+            @foreach($post->tags as $tag) 
+            <a href="/blog?tag={{strtoupper($tag->slug)}}" class="inline-block rounded mx-2 px-4 py-1  text-white font-bold tag--bubble">{{$tag->name}}</a>
+            @endforeach
+            @endslot
             @slot('article_body_part')
             {{substr($post->body,0,40)}}
             @endslot
+            
             @slot('article_slug')
             {{$post->slug}}
             @endslot

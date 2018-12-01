@@ -1,7 +1,7 @@
 <article style="width:400px; height:650px;" class=" shadow border border-solid border-grey-light my-8">
         <div style="height:50px" class="px-4 flex justfy-between items-center">
         <p class="font-bold ">{{$article_category}}</p>
-        <p class="font-semibold ml-2 ">{{$article_date}}</p>
+        <p class="font-semi bold ml-2 ">{{$article_date}}</p>
         </div>
         <img style="height:300px;" class="block w-full bg-grey-light" src="{{$link_image}}">
         <div>
