@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 class RegisterController extends Controller
 {
     public function show(){
-        if(! auth()){
+        if(!Auth::check()){
         return view('pages.site.auth.register');
         }
         else{

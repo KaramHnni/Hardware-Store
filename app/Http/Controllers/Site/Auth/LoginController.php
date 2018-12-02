@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 class LoginController extends Controller
 {
     public function show(){
-        if(! auth()){
+        if(! Auth::check()){
         return view('pages.site.auth.login');
         }
         else{
