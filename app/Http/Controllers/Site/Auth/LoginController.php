@@ -9,7 +9,12 @@ use App\Http\Controllers\Controller;
 class LoginController extends Controller
 {
     public function show(){
+        if(! auth()){
         return view('pages.site.auth.login');
+        }
+        else{
+            return redirect()->back();
+        }
     }
 
     public function auth(Request $request){
