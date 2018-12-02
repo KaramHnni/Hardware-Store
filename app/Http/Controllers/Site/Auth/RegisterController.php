@@ -10,7 +10,12 @@ use App\Http\Controllers\Controller;
 class RegisterController extends Controller
 {
     public function show(){
+        if(! auth()){
         return view('pages.site.auth.register');
+        }
+        else{
+            return redirect()->back();
+        }
     }
 
     public function register(Request $request){
