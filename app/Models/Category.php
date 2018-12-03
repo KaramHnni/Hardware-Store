@@ -11,7 +11,7 @@ class Category extends Model
      *
      * @var string
      */
-    protected $table = 'categories';
+    protected $table = 'blog_categories';
     
     /**
      * Indicates if the model should be timestamped.
