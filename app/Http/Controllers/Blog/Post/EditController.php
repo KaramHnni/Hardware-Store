@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Blog\Post;
 
 use App\Models\Post;
-use App\Models\Category;
+use App\Models\Blog\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
