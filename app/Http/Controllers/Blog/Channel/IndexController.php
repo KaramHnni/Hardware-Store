@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Blog\Channel;
 
 use App\Models\Channel;
-use App\Models\Category;
+use App\Models\Blog\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\User\Blog\Posts;
 
-use App\Models\Category;
+use App\Models\Blog\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;

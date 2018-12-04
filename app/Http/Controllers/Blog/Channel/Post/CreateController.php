@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Blog\Channel\Post;
 
-use App\Models\Category;
+use App\Models\Blog\Category;
 use App\Models\Post;
 use App\Models\Publisher;
 use App\Models\Channel;
