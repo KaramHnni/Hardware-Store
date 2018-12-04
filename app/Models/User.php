@@ -84,6 +84,11 @@ class User extends Authenticatable
 
         return $this->belongsToMany('\App\Models\Blog\Post');
     }
+
+    public function publishers(){
+
+        return $this->hasMany('\App\Models\Blog\Publisher','user_id','id');
+    }
     
 
 }

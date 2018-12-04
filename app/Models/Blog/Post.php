@@ -115,7 +115,7 @@ class Post extends Model
 
     public function publisher(){
 
-        return $this->hasOne('\App\Models\Publisher','id','publisher_id');
+        return $this->hasOne('\App\Models\Blog\Publisher','id','publisher_id');
     }
 
     public function channel(){
