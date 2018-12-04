@@ -72,7 +72,7 @@ class User extends Authenticatable
 
     public function owners(){
 
-        return $this->hasMany('\App\Models\Owner','user_id','id');
+        return $this->hasMany('\App\Models\Blog\Owner','user_id','id');
     }
 
     public function channel(){

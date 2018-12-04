@@ -97,7 +97,7 @@ class Channel extends Model
    
     public function owner(){
 
-        return $this->hasOne('\App\Models\Owner','id','owner_id');
+        return $this->hasOne('\App\Models\Blog\Owner','id','owner_id');
         
     }
 
