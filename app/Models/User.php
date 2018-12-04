@@ -77,7 +77,7 @@ class User extends Authenticatable
 
     public function channel(){
 
-        return $this->belongsToMany('\App\Models\Channel');
+        return $this->belongsToMany('\App\Models\Blog\Channel');
     }
 
     public function posts(){

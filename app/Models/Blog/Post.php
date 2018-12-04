@@ -120,7 +120,7 @@ class Post extends Model
 
     public function channel(){
 
-        return $this->hasOne('\App\Models\Channel','id','channel_id');
+        return $this->hasOne('\App\Models\Blog\Channel','id','channel_id');
     }
 
     public function users(){

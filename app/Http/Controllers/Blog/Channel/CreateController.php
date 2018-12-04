@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Blog\Channel;
 
 use App\Models\Owner;
 use App\Models\Blog\Category;
-use App\Models\Channel;
+use App\Models\Blog\Channel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 

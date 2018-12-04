@@ -60,7 +60,7 @@ class Owner extends Model
 
     public function channels(){
 
-        return $this->hasMany('\App\Models\Channel','owner_id','id');
+        return $this->hasMany('\App\Models\Blog\Channel','owner_id','id');
     }
 
     public function user(){

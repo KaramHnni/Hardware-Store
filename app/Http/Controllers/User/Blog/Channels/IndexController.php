@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\User\Blog\Channels;
 
-use App\Models\Channel;
+use App\Models\Blog\Channel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
