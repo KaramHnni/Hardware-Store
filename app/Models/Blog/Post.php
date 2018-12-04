@@ -128,6 +128,6 @@ class Post extends Model
         return $this->belongsToMany('\App\Models\User');
     }
     public function tags(){
-        return $this->belongsToMany('\App\Models\Tag');
+        return $this->belongsToMany('\App\Models\Blog\Tag');
     }
 }

@@ -6,7 +6,7 @@ use App\Models\Blog\Category;
 use App\Models\Blog\Post;
 use App\Models\Blog\Publisher;
 use App\Models\Blog\Channel;
-use App\Models\Tag;
+use App\Models\Blog\Tag;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
