@@ -60,7 +60,7 @@ class Publisher extends Model
 
     public function posts(){
 
-        return $this->hasMany('\App\Models\Post','publisher_id','id');
+        return $this->hasMany('\App\Models\Blog\Post','publisher_id','id');
     }
 
     public function user(){

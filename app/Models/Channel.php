@@ -91,7 +91,7 @@ class Channel extends Model
     }
     public function posts(){
 
-            return $this->hasMany('\App\Models\Post','channel_id','id');
+            return $this->hasMany('\App\Models\Blog\Post','channel_id','id');
     }
 
    
