@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+const tailwindcss = require('tailwindcss');
 
 /*
  |--------------------------------------------------------------------------
@@ -11,5 +12,7 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.react('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
+mix.postCss('resources/css/tailwind.css', 'public/assets/css/frameworks.min.css', [
+    tailwindcss('./resources/js/tailwind.js'),
+]);  
+mix.react('resources/js/app.js', 'public/js');

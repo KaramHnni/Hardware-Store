@@ -19314,25 +19314,98 @@ var Example = function (_Component) {
         value: function render() {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                { className: 'container' },
+                null,
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
-                    { className: 'row justify-content-center' },
+                    { 'class': 'bg-green-lightest w-full min-h-screen' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
-                        { className: 'col-md-8' },
+                        { 'class': ' w-1/2 text-center  mx-auto my-32' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'p',
+                            { 'class': 'text-orange-darker text-3xl my-12' },
+                            'the E-Market you have been looking for'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'p',
+                            { 'class': 'text-orange text-lg my-8 font-semibold leading-loose' },
+                            'Discover The hardwares which are right next to you with only a click. Yes a click will do'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'a',
+                            { href: '#', 'class': 'hover:border-black hover:text-black inline-block mx-2 px-2 py-2 font-bold text-orange-light border-2 text-lg border-solid border-orange-light rounded' },
+                            'Discover More'
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { 'class': 'min-h-screen flex items-center justify-around ' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { 'class': 'w-1/5' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'p',
+                            { 'class': 'text-center text-orange-darker font-semibold leading-loose' },
+                            'Discover the hardware occasions right near you'
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { 'class': 'w-1/5' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'p',
+                            { 'class': 'text-center text-orange-darker font-semibold leading-loose' },
+                            'Higher Levels Of Security'
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { 'class': 'w-1/5' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'p',
+                            { 'class': 'text-center text-orange-darker font-semibold leading-loose' },
+                            'Contact The Buyers Directly'
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { 'class': 'w-1/5' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'p',
+                            { 'class': 'text-center text-orange-darker font-semibold leading-loose' },
+                            'Learn more everyday about the market'
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { 'class': 'min-h-screen py-20 bg-grey-lighter' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        null,
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'p',
+                            { 'class': 'text-center text-4xl my-20 font-bold' },
+                            'Join Us Now'
+                        ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'div',
-                            { className: 'card' },
+                            { 'class': 'flex justify-between py-20 w-1/2 mx-auto items-center' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'card-header' },
-                                'Example Component'
+                                'a',
+                                { href: '', 'class': 'hover:border-black hover:text-black inline-block mx-2 px-2 py-2 font-bold text-orange-light border-2 text-lg border-solid border-orange-light rounded' },
+                                'Register For Free'
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'card-body' },
-                                'I\'m an example component!'
+                                'span',
+                                null,
+                                'You Have an account ? Then'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'a',
+                                { href: '', 'class': 'hover:border-black hover:bg-black inline-block mx-2 px-2 py-2 font-bold text-white border-2 text-lg border-orange-light border-solid bg-orange-light rounded' },
+                                'Login To your Account'
                             )
                         )
                     )
@@ -19348,7 +19421,7 @@ var Example = function (_Component) {
 
 
 if (document.getElementById('example')) {
-    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Example, null), document.getElementById('example'));
+    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Example, null), document.getElementById('app'));
 }
 
 /***/ }),
